@@ -29,3 +29,9 @@
 >   [ScoreController.cs - C# - Python제어 스크립트](PythonController.cs) <br>   
 >   [PersonMove.cs - NavMesh를 이용하여 사람이 길을 찾게하는 스크립트](PersonMove.cs)<br>  
 >   [PersonRayCast.cs - 사람을 기준으로 Ray를 쏘아 불을 감지하는 스크립트](PersonRayCast.cs)<br>   
+
+-> 시작할 때 랜덤층 / 랜덤 노드에서 불이 번진다.
+-> Person Object들은 1층의 Target을 가장 빠르고 안전한(가중치의 합이 가장 적은 길) 길을 찾아서(Unity 엔진의 Navmesh 기능 활용) 간다.
+-> 가는 길에 불이 나거나 번지면 다른 길을 다시 찾아서 간다.
+-> 비상 탈출구의 가중치는 0 이다.
+-> IronPython 패키지를 통해 C#에서 Python 코드를 불러들여서 Python을 작성된 알고리즘을 수행한다. - 이에 따라 대피 방향 화살표가 바뀐다.
